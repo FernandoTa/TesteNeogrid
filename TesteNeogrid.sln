@@ -12,6 +12,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{BEDA7A54-1A54-4F2C-BE92-7B8267E318C3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DEBBCD87-4B2B-42FE-8BE9-7103461BAB16} = {DEBBCD87-4B2B-42FE-8BE9-7103461BAB16}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

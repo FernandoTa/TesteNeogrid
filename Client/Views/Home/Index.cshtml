@@ -1,27 +1,87 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
-}
-<script src=""></script><!DOCTYPE html>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-<script src="~/Scripts/Home.js"></script>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>TESTE NEOGRID</title>
-</head>
-<body>
+    ViewBag.Title = "TESTE NEOGRID";
+    @model Client.Models.valoresCalculo
     <h1>OBTER O VALOR DOS JUROS</h1>
-    @Html.ActionLink("Obter juros", "taxaJuros")
+    @*@Html.ActionLink("Obter juros", "taxaJuros", null, new { @class = "button" })*@
+    <button onclick="Juros()">Calcular</button>
     <br />
     <br />
     <br />
-    <h1>CALCULAR O VALOR FINAL COM JUROS</h1>
-    <label>Valor inicial:</label>
-    <input type="number" id="valorInicial" />
+    <h1>OBTER O VALOR FINAL CON JUROS</h1>
+    <label>Capital inicial:</label>
+    <input type="number" id="inicial" />
     <br />
     <br />
-    <label>Quantos meses:</label>
-    <input type="number" id="valorTempo" />
-    @Html.ActionLink("Calcular", "calculaJuros", new { inicial = ViewBag.DateSortParm,meses = ViewBag.DateSortParm})
-</body>
-</html>
+    <label>Tempo(Meses):</label>
+    <input type="number" id="meses" />
+    <button onclick="Calcular()">Calcular</button>
+    <br />
+    <br />
+    <br />
+    <h1>SHOW ME THE CODE</h1>
+    <button onclick="Show()">Show me the code</button>
+    @*@Html.ActionLink("Calcular", "calculaJuros", null, new { @class = "button" })*@
+    @*using (Html.BeginForm())
+        {
+            <fieldset>
+                <legend>CALCULAR O VALOR FINAL COM JUROS</legend>
+                <ol>
+                    <li>
+                        @Html.LabelFor(m => m.inicial)
+                        @Html.EditorFor(m => m.inicial)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.meses)
+                        @Html.EditorFor(m => m.meses)
+                    </li>
+                </ol>
+                <input type="submit" value="Calcular valor" />
+            </fieldset>
+        }*@
+}
+<script>
+    function Juros() {
+        //jurosAPI = data;
+        //$.ajax({
+        //    url: '/home/taxaJuros',
+        //    type: "GET",
+        //    success: function (data, textStatus, jqXHR) {
+        //        alert(data);
+        //    },
+        //    error: function (jqXHR, textStatus, errorThrown) {
+        //        alert('Error occurred!');
+        //    }
+
+        //});
+        var location = window.location;
+        window.location = location.origin + '/home/taxaJuros';
+    }
+    function Calcular() {
+        //jurosAPI = data;
+        //$.ajax({
+        //    url: '/home/calculajuros?inicial=' + document.getElementById("inicial").value + '&meses=' + document.getElementById("meses").value,
+        //    type: "GET",
+        //    success: function (data, textStatus, jqXHR) {
+        //        alert(data);
+        //    },
+        //    error: function (jqXHR, textStatus, errorThrown) {
+        //        alert('Error occurred!');
+        //    }
+
+        //});
+        if (document.getElementById("inicial").value == '' || document.getElementById("inicial").value == undefined) {
+            alert("Digite o valor inicial.");
+        }
+        else if (document.getElementById("meses").value == '' || document.getElementById("meses").value == undefined) {
+            alert("Digite o tempo em meses.");
+        }
+        else {
+            var location = window.location;
+            window.location = location.origin + '/home/calculajuros?inicial=' + document.getElementById("inicial").value + '&meses=' + document.getElementById("meses").value;
+        }
+    }
+    function Show() {
+        var location = window.location;
+        window.location = location.origin + '/home/showmethecode';
+    }
+</script>

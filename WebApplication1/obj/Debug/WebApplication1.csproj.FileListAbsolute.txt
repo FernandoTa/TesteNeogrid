@@ -105,8 +105,8 @@ C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\bin\roslyn\VBC
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using Client.Service_api1;
+﻿using Client.Models;
+using Client.Service_api1;
 using Client.Service_api2;
 using System;
 using System.Collections.Generic;
@@ -21,12 +22,24 @@ namespace Client.Controllers
         {
             ViewBag.Message = client.taxaJuros();
 
-            return new EmptyResult();
+            return View();
         }
 
+        public ActionResult calculaJuros()
+        {
+            return View();
+        }
+        [HttpGet]
         public ActionResult calculaJuros(decimal inicial, int meses)
         {
-            ViewBag.Message = client1.calculaJuros(inicial, meses);
+            ViewBag.Message = client1.calculaJuros(decimal.Parse(inicial.ToString()), meses);
+
+            return View();
+        }
+        [HttpGet]
+        public ActionResult showMeTheCode()
+        {
+            ViewBag.Message = client1.showMeTheCode();
 
             return View();
         }
