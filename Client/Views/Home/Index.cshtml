@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src=""></script><!DOCTYPE html>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script src="~/Scripts/Home.js"></script>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TESTE NEOGRID</title>
+</head>
+<body>
+    <h1>OBTER O VALOR DOS JUROS</h1>
+    @Html.ActionLink("Obter juros", "taxaJuros")
+    <br />
+    <br />
+    <br />
+    <h1>CALCULAR O VALOR FINAL COM JUROS</h1>
+    <label>Valor inicial:</label>
+    <input type="number" id="valorInicial" />
+    <br />
+    <br />
+    <label>Quantos meses:</label>
+    <input type="number" id="valorTempo" />
+    @Html.ActionLink("Calcular", "calculaJuros", new { inicial = ViewBag.DateSortParm,meses = ViewBag.DateSortParm})
+</body>
+</html>
