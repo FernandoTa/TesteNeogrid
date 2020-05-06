@@ -12,7 +12,8 @@ namespace WebApplication1
     public interface IService_Api2
     {
         [OperationContract]
-        string calculaJuros(decimal inicial, int meses);
+        float calculaJuros();
+        //string calculaJuros(decimal inicial, int meses);
         [OperationContract]
         string showMeTheCode();
     }

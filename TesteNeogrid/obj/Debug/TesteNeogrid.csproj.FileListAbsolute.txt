@@ -105,7 +105,6 @@ C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\bin\roslyn\VBCSCo
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\obj\Debug\TesteNeogrid.csprojAssemblyReference.cache
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\obj\Debug\TesteNeogrid.csproj.CoreCompileInputs.cache
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\obj\Debug\TesteNeogrid.csproj.CopyComplete
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\TesteNeogrid\obj\Debug\TesteNeogrid.dll

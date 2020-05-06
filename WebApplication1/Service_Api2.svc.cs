@@ -14,18 +14,19 @@ namespace WebApplication1
     public class Service_Api2 : IService_Api2
     {
         ServiceClient client = new ServiceClient();
-        public string calculaJuros(decimal inicial, int meses)
+        public float calculaJuros()//(decimal inicial, int meses)
         {
             float juros = client.taxaJuros();
-            string result = (inicial * (decimal)Math.Pow(1 + juros, meses)).ToString();
-            int pos = result.IndexOf(',');
-            if(pos == -1)
-            {
-                result = result+",00";
-                pos = result.IndexOf(',');
-            }
-            result = result.Substring(0,pos+3);
-            return result;
+            //string result = (inicial * (decimal)Math.Pow(1 + juros, meses)).ToString();
+            //int pos = result.IndexOf(',');
+            //if(pos == -1)
+            //{
+            //    result = result+",00";
+            //    pos = result.IndexOf(',');
+            //}
+            //result = result.Substring(0,pos+3);
+            //return result
+            return juros;
         }
 
         public string showMeTheCode()

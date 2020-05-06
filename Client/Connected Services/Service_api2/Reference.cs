@@ -16,10 +16,10 @@ namespace Client.Service_api2 {
     public interface IService_Api2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService_Api2/calculaJuros", ReplyAction="http://tempuri.org/IService_Api2/calculaJurosResponse")]
-        string calculaJuros(decimal inicial, int meses);
+        float calculaJuros();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService_Api2/calculaJuros", ReplyAction="http://tempuri.org/IService_Api2/calculaJurosResponse")]
-        System.Threading.Tasks.Task<string> calculaJurosAsync(decimal inicial, int meses);
+        System.Threading.Tasks.Task<float> calculaJurosAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService_Api2/showMeTheCode", ReplyAction="http://tempuri.org/IService_Api2/showMeTheCodeResponse")]
         string showMeTheCode();
@@ -55,12 +55,12 @@ namespace Client.Service_api2 {
                 base(binding, remoteAddress) {
         }
         
-        public string calculaJuros(decimal inicial, int meses) {
-            return base.Channel.calculaJuros(inicial, meses);
+        public float calculaJuros() {
+            return base.Channel.calculaJuros();
         }
         
-        public System.Threading.Tasks.Task<string> calculaJurosAsync(decimal inicial, int meses) {
-            return base.Channel.calculaJurosAsync(inicial, meses);
+        public System.Threading.Tasks.Task<float> calculaJurosAsync() {
+            return base.Channel.calculaJurosAsync();
         }
         
         public string showMeTheCode() {

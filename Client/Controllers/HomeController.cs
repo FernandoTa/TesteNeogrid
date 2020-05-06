@@ -32,8 +32,16 @@ namespace Client.Controllers
         [HttpGet]
         public ActionResult calculaJuros(decimal inicial, int meses)
         {
-            ViewBag.Message = client1.calculaJuros(decimal.Parse(inicial.ToString()), meses);
-
+            //ViewBag.Message = client1.calculaJuros(decimal.Parse(inicial.ToString()), meses);
+            float juros = client1.calculaJuros();
+            string result = (inicial * (decimal)Math.Pow(1 + juros, meses)).ToString();
+            int pos = result.IndexOf(',');
+            if (pos == -1)
+            {
+                result = result + ",00";
+                pos = result.IndexOf(',');
+            }
+            ViewBag.Message = result.Substring(0, pos + 3);
             return View();
         }
         [HttpGet]

@@ -204,6 +204,7 @@
     <Content Include="Views\Home\taxajuros.cshtml" />
     <Content Include="Views\Home\calculaJuros.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\showmethecode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,16 +2,13 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="calculaJuros">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="inicial" type="xs:decimal" />
-        <xs:element minOccurs="0" name="meses" type="xs:int" />
-      </xs:sequence>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="calculaJurosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="calculaJurosResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="calculaJurosResult" type="xs:float" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
