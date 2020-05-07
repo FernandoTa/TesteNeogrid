@@ -20,15 +20,11 @@ namespace Client.Controllers
 
         public ActionResult taxaJuros()
         {
-            ViewBag.Message = client.taxaJuros();
+            ViewBag.Message = client.taxaJuros()*100;
 
             return View();
         }
 
-        public ActionResult calculaJuros()
-        {
-            return View();
-        }
         [HttpGet]
         public ActionResult calculaJuros(decimal inicial, int meses)
         {
@@ -47,7 +43,7 @@ namespace Client.Controllers
         [HttpGet]
         public ActionResult showMeTheCode()
         {
-            ViewBag.Message = client1.showMeTheCode();
+            ViewBag.Message = client1.showMeTheCode().ToString();
 
             return View();
         }

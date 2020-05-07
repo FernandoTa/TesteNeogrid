@@ -1,29 +1,60 @@
-﻿@{
+﻿<style>
+.btn-custom {
+    display: inline-block;
+    border: none;
+    color: #fff;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius:  15px 15px 15px 15px;
+    -moz-border-radius:  15px 15px 15px 15px;
+    font-family: Arial;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #f0000a;
+}
+</style>
+@{
     ViewBag.Title = "TESTE NEOGRID";
-    @model Client.Models.valoresCalculo
-    <h1>OBTER O VALOR DOS JUROS</h1>
-    <button onclick="Juros()">Calcular</button>
-    <br />
-    <br />
-    <br />
-    <h1>OBTER O VALOR FINAL CON JUROS</h1>
-    <label>Capital inicial:</label>
-    <input type="number" id="inicial" />
-    <br />
-    <br />
-    <label>Tempo(Meses):</label>
-    <input type="number" id="meses" />
-    <button onclick="Calcular()">Calcular</button>
-    <br />
-    <br />
-    <br />
-    <h1>SHOW ME THE CODE</h1>
-    <button onclick="Show()">Show me the code</button>
+    <div>
+        <div style="background-image: linear-gradient(#00263c, #0019e0);display:inline-block; width:32%; height:100%"></div>
+        <div style="background-image: linear-gradient(#00263c, #0019e0);color:#e2e2e2;display:inline-block; justify-content: center;align-items: center; width:auto; padding: 0px 15px 20px 15px">
+            <div style="text-align: center">
+                <h2>Teste Neogrid - Fernando Hideki Takenaka</h2>
+            </div>
+            <div style="text-align: center">
+                <h2>OBTER O VALOR DOS JUROS</h2>
+                <button onclick="Juros()" class="btn-custom" style="font-weight:700;">Buscar valor</button>
+            </div>
+            <div style="text-align: center">
+                <br />
+                <br />
+                <br />
+                <h2>OBTER O VALOR FINAL COM JUROS</h2>
+                <h3>Capital inicial:</h3>
+                <label style="font-size: 1.17em">R$ </label><input type="number" id="inicial" />
+                <br />
+                <h3>Tempo (Em meses):</h3>
+                <input type="number" id="meses" />
+                <br />
+                <br />
+                <button onclick="Calcular()" class="btn-custom" style="font-weight:700;">Calcular</button>
+            </div>
+            <div style="text-align: center">
+                <br />
+                <br />
+                <br />
+                <h2>Mostre-me o código</h2>
+                <button onclick="Show()" class="btn-custom" style="font-weight:700;">Show me the code</button>
+            </div>
+        </div>
+        <div style="background-image: linear-gradient(#00263c, rgba(0, 25, 224, 0.78));display:inline-block; width:auto;"></div>
+    </div>
 }
 <script>
     function Juros() {
         var location = window.location;
-        window.location = location.origin + '/home/taxaJuros';
+        window.location = location.origin + '/Home/taxaJuros';
     }
     function Calcular() {
         if (document.getElementById("inicial").value == '' || document.getElementById("inicial").value == undefined) {
@@ -34,11 +65,11 @@
         }
         else {
             var location = window.location;
-            window.location = location.origin + '/home/calculajuros?inicial=' + document.getElementById("inicial").value + '&meses=' + document.getElementById("meses").value;
+            window.location = location.origin + '/Home/calculajuros?inicial=' + document.getElementById("inicial").value + '&meses=' + document.getElementById("meses").value;
         }
     }
     function Show() {
         var location = window.location;
-        window.location = location.origin + '/home/showmethecode';
+        window.location = location.origin + '/Home/showmethecode';
     }
 </script>

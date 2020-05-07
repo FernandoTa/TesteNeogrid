@@ -1,5 +1,39 @@
-﻿@{
+﻿<style>
+
+    .btn-custom {
+        display: inline-block;
+        border: none;
+        color: #fff;
+        border-radius: 15px 15px 15px 15px;
+        -webkit-border-radius: 15px 15px 15px 15px;
+        -moz-border-radius: 15px 15px 15px 15px;
+        font-family: Arial;
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        padding: 10px 15px;
+        background-color: #f0000a;
+    }
+</style>
+@{
     ViewBag.Title = "Show me the code";
+    <div>
+        <div style="background-image: linear-gradient(#00263c, #0019e0);display:inline-block; width:34%; height:100%"></div>
+        <div style="background-image: linear-gradient(#00263c, #0019e0);color:#e2e2e2;display:inline-block; justify-content: center;align-items: center; width:auto; padding: 0px 15px 20px 15px">
+            <div style="text-align: center">
+                <h2>@ViewBag.Title</h2>
+                <a href="@ViewBag.Message" class="btn-custom" style="font-weight:700;">@ViewBag.Message</a>
+            </div>
+            <br />
+            <div style="text-align: center">
+                <button onclick="Voltar()" class="btn-custom" style="font-weight:700;">Voltar</button>
+            </div>
+        </div>
+    </div>
 }
-<h2>@ViewBag.Title.</h2>
-<a href="@ViewBag.Message">@ViewBag.Message</a>
+<script>
+    function Voltar() {
+        var location = window.location;
+        window.location = location.origin + '/Home/Index';
+    }
+</script>

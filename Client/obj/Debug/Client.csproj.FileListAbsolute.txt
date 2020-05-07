@@ -149,3 +149,4 @@ C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\Client\obj\Debug\Client.csproj
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\Client\obj\Debug\Client.dll
 C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\Client\obj\Debug\Client.pdb
+C:\Users\Hideki\Downloads\EXtras\GIT\TesteNeogrid\Client\obj\Debug\Client.csprojAssemblyReference.cache
