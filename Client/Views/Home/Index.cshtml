@@ -32,10 +32,10 @@
                 <br />
                 <h2>OBTER O VALOR FINAL COM JUROS</h2>
                 <h3>Capital inicial:</h3>
-                <label style="font-size: 1.17em">R$ </label><input type="number" id="inicial" />
+                <label style="font-size: 1.17em">R$ </label><input type="number" id="inicial" min="0"/>
                 <br />
                 <h3>Tempo (Em meses):</h3>
-                <input type="number" id="meses" />
+                <input type="number" id="meses" min="1"/>
                 <br />
                 <br />
                 <button onclick="Calcular()" class="btn-custom" style="font-weight:700;">Calcular</button>
@@ -60,8 +60,14 @@
         if (document.getElementById("inicial").value == '' || document.getElementById("inicial").value == undefined) {
             alert("Digite o valor inicial.");
         }
+        else if (document.getElementById("inicial").value < 0) {
+            alert("O valor inicial não pode ser negativo.");
+        }
         else if (document.getElementById("meses").value == '' || document.getElementById("meses").value == undefined) {
             alert("Digite o tempo em meses.");
+        }
+        else if (document.getElementById("meses").value < 1) {
+            alert("O valor de tempo não pode ser inferior a 1.");
         }
         else {
             var location = window.location;
